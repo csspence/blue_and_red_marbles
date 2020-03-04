@@ -17,6 +17,11 @@ guessBlue() should return the probability of drawing a blue marble, expressed as
 should return 0.6.
 */
 
-function guessBlue(blueStart, redStart, bluePulled, redPulled) {
-  // Your code here.
+const guessBlue = (blueStart, redStart, bluePulled, redPulled) => {
+  let bag = {
+    blue: blueStart - bluePulled,
+    red: redStart - redPulled
+  };
+
+  return bag.blue / (bag.blue + bag.red);
 }
